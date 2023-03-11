@@ -1,4 +1,4 @@
-// please note: the solution to the challenge was put onto our repo early and I started this repository by copying that code. I removed all the code they included but I have kept the file names. I am also working along side the solution while trying my best to only use the things that I understand.
+// please note: the solution to the challenge was put onto our repo early and I started this repository by copying that code. I removed all the additional code they included but I have kept the file names. I am also using the solution as a resource, but I am trying to find a solution primarily by myself.
 
 // allows us to read and write our files
 // fs
@@ -6,6 +6,11 @@ const fs = require('fs');
 // Allows us to generate a random id for each note.
 const uuidv1 = require('uuid/v1');
 
+
+// NEED to look through the index to better understand how the fetch requests are parsing the data they receive. Need to know what they're expecting so I can structure the data returned accordingly. 
+
+
+// I have adopted the class object structure used in the repository because it seems like it makes importing the helper functions much easier. I am not going to use it to implement async functions.
 class Store {
     read() {
         // read the notes file return the value of that file.
