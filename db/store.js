@@ -3,7 +3,7 @@
 // allows us to read and write our files
 // fs
 const fs = require('fs');
-// 
+// Allows us to generate a random id for each note.
 const uuidv1 = require('uuid/v1');
 
 class Store {
