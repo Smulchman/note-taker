@@ -4,6 +4,7 @@ const router = require('express').Router();
 
 router.get('*', (req, res) => {
   console.log("succesfully submitted get request to the index");
+  res.send("success!");
 });
 
 module.exports = router;
