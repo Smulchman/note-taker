@@ -6,33 +6,8 @@ const fs = require('fs');
 // Allows us to generate a random id for each note.
 const uuidv1 = require('uuid/v1');
 
-
-// NEED to look through the index to better understand how the fetch requests are parsing the data they receive. Need to know what they're expecting so I can structure the data returned accordingly. 
-
-
 // I have adopted the class object structure used in the repository because it seems like it makes importing the helper functions much easier. I am not going to use it to implement async functions.
 class Store {
-    read(db) {
-        // read the notes file return the value of that file.
-        // needs to take JSON and parse that data into js
-        return fs.readFile(db, (err, data) => {
-            if (err) {
-                console.error(err);
-            }
-            console.log(data);
-            return data;
-        });
-    }
-    write(note) {
-        // provide all the data for a chosen note
-        // I need to have an id for the note and then on retrieval, return the information for that note so that it can be written into the front end.
-    }
-    retrieve() {
-        // get all of the notes, needs to populate the left side and include an attribute or data- for the note's id
-    }
-    addNote(note) {
-        // add whatever content the user has added as a note.
-    }
 };
 
 // I didn't know we could export the class as a created object, very useful for having objects as method machines. Learned this from the solution.

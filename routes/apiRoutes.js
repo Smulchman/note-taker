@@ -3,19 +3,16 @@
 const router = require('express').Router();
 const db = require ("../db/db.json");
 
-
+// very simple, read the db.json file, parse it, return it.
 router.get('/api/notes', (req, res) => {
   console.info("succesfully submitted get request to notes");
   res.json(db);
 });
 
-// not working. not sure why.
-router.post('/api/notes'), (req, res) => {
-  console.log("succesfully submitted post request to notes");
-  res.json("notes post success!");
-  // need to add the note in the request to the note db
-  // need to parse through the note db, have it as an array, add our note to the array
-  // then parse it back into json?
-};
+
+router.post(('/api/notes'), (req, res) => {
+  console.info("succesfully submitted post request to notes");
+  res.json(db);
+});
 
 module.exports = router;

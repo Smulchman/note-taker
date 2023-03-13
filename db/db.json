@@ -1,6 +1,14 @@
 [
     {
-        "title":"Test Title",
-        "text":"Test text"
+        "title":"Apples",
+        "text":"bite in"
+    },
+    {
+        "title":"Oranges",
+        "text":"slice up"
+    },
+    {
+        "title":"Bananas",
+        "text":"peel"
     }
 ]
