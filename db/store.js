@@ -12,9 +12,16 @@ const uuidv1 = require('uuid/v1');
 
 // I have adopted the class object structure used in the repository because it seems like it makes importing the helper functions much easier. I am not going to use it to implement async functions.
 class Store {
-    read() {
+    read(db) {
         // read the notes file return the value of that file.
         // needs to take JSON and parse that data into js
+        return fs.readFile(db, (err, data) => {
+            if (err) {
+                console.error(err);
+            }
+            console.log(data);
+            return data;
+        });
     }
     write(note) {
         // provide all the data for a chosen note
