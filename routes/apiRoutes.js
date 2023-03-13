@@ -5,14 +5,19 @@ const db = require ("../db/db.json");
 
 // very simple, read the db.json file, parse it, return it.
 router.get('/api/notes', (req, res) => {
-  console.info("succesfully submitted get request to notes");
+  console.info("succesfully submitted get request to db");
   res.json(db);
 });
 
 
 router.post(('/api/notes'), (req, res) => {
-  console.info("succesfully submitted post request to notes");
+  console.info("succesfully submitted post request to db");
+  console.log(req.body);
   res.json(db);
+  // parse through db.json
+  // make it an array
+  // push req.body onto array
+  // rewrite the file as a body
 });
 
 module.exports = router;
