@@ -5,13 +5,13 @@ const router = require('express').Router();
 const path = require('path');
 
 // this links to our index.html page as the homepage
-router.get('*', (req, res) => {
+router.get('/', (req, res) => {
   console.info("succesfully submitted get request to the index");
   res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
 // this links to our notes.html page as the note page.
-router.get('*', (req, res) => {
+router.get('/notes', (req, res) => {
   console.info("succesfully submitted get request to the notes page");
   res.sendFile(path.join(__dirname, '../public/notes.html'));
 });
