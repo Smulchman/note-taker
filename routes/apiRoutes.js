@@ -10,7 +10,7 @@ router.get('/api/notes', (req, res) => {
 });
 
 
-router.post(('/api/notes'), (req, res) => {
+router.post('/api/notes', (req, res) => {
   console.info("succesfully submitted post request to db");
   console.log(req.body);
   // parse through db.json
