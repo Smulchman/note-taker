@@ -2,6 +2,8 @@
 
 const router = require('express').Router();
 const db = require ("../db/db.json");
+const fs = require ('fs');
+const uuid = ('uuid');
 
 // very simple, read the db.json file, parse it, return it.
 router.get('/api/notes', (req, res) => {
@@ -12,11 +14,14 @@ router.get('/api/notes', (req, res) => {
 
 router.post('/api/notes', (req, res) => {
   console.info("succesfully submitted post request to db");
-  console.log(req.body);
+  let data = req.body;
+  db.push(data);
+  fs.writeFile('./db/db.json', JSON.stringify(db), (err) => {
+    if (err) {
+      console.error(err);
+    }
+  });
   res.send("success!");
-  // parse through db.json
-  // make it an array
-  // push req.body onto array
   // rewrite the file as a body
 });
 
