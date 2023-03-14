@@ -13,6 +13,7 @@ router.get('/api/notes', (req, res) => {
 router.post('/api/notes', (req, res) => {
   console.info("succesfully submitted post request to db");
   console.log(req.body);
+  res.send("success!");
   // parse through db.json
   // make it an array
   // push req.body onto array
